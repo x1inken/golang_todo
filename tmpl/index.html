@@ -15,9 +15,9 @@
             {{range .todo}}
             <li>
                 <form action="/done">
-                    <input type="hidden" name="ida" value="{{.ID}}">
+                    <input type="hidden" name="id" value="{{.ID}}">
                     <input type="hidden" name="status" value="{{.Status}}">
-                {{.CreatedAtS}} {{.Hito}} {{.Content}} 
+                    {{.CreatedAt}} {{.Hito}} {{.Content}} 
                     {{if eq .Status 0}}
                         やってない
                         <input type="submit" value="Done">
